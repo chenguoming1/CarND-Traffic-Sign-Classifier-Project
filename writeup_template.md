@@ -60,7 +60,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Data Exploration, according to the image, some of the front signs got more data then the rare, so there may overfit to the front signs.
 
 ![alt text][image9]
 
