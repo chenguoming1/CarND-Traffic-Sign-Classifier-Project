@@ -79,16 +79,25 @@ Preprocessing Steps:
 I am using Lenet model, the following is the detailed structure of the network.
 
 Input layer = 32x32x1 
+
 Convolution layer = 5x5 kernel, stride=1, padding=VALID, output=28x28x6, activation=relu
+
 Avg pooling layer = 2x2 kernel, stride=2, padding=VALID, output=14x14x6
+
 Convolution layer = 5x5 kernel, stride=1, padding=VALID, output=10x10x16, activation=relu
+
 Max pooling lyer  = 2x2 kernel, stride=2, padding=VALID, output=5x5x16
+
 Fully connected layer = 120 nodes, activation=relu
+
 Fully connected layer = 84 nodes, activation=relu
+
 Output layer = 43
 
 learning rate = 0.005
+
 classification function = softmax
+
 optimizer = adam
 
 
