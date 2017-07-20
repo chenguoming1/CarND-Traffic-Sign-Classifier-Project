@@ -142,11 +142,11 @@ Here are the results of the prediction:
 | Priority road      		| Priority road   									| 
 | Speed limit (70km/h)     			| Speed limit (70km/h) 										|
 | Yield					| Yield											|
-| End of speed limit (80km/h)	      		| speed limit (80km/h)					 				|
+| End of speed limit (80km/h)	      		| End of speed limit (80km/h)					 				|
 | No vehicles			| No vehicles      							|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 91.4%. 
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 
 The accuracy here is good because i choose the similar sized images, if I choose bigger images the performance worsen, so should try to add gittered images and train it to get better performance
 
