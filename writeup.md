@@ -103,16 +103,24 @@ optimizer = adam
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
+optimizer: adam 
 batch size: 128
 number of epoches: 10
 learning rate: 0.005
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-model results:
-* validation set accuracy of 0.93
-* test set accuracy of 0.914
+Iterative approach is usually take very long time, for me it is better to use batch approach.
+
+Lenet CNN's convolution layers serve as feature deduction and the fully connected layer serve as the actual training.
+
+and it's easy to train thefore LeNet is suitable for current problem.
+
+I have tried by adding more layers and more hidden units, the validation result seem better but when it come to test set the result is very porr, so it may be overfitting.
  
+I have no idea about choosing parameter, tried adjusting the learning rates and find that learning rate 0.001 to 0.007 seem good and the rest are getting very poor result.
+
+So i just tried to train with these numbers and sometimes it gets to 0.93 in validation set but sometimes doesn't so I tried to run multiple times and when it get to 0.93 i stopped the training and saved the model.
 
 ###Test a Model on New Images
 
