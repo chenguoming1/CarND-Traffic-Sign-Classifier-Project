@@ -94,7 +94,7 @@ Fully connected layer = 84 nodes, activation=relu
 
 Output layer = 43
 
-learning rate = 0.005
+learning rate = 0.007
 
 classification function = softmax
 
@@ -106,7 +106,10 @@ optimizer = adam
 optimizer: adam 
 batch size: 128
 number of epoches: 10
-learning rate: 0.005
+learning rate: 0.007
+
+epoch is 10 but I stop the training if i got 0.93 accuracy on validation set.
+
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -153,8 +156,16 @@ The accuracy here is good because i choose the similar sized images, if I choose
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
+
 Currently the logic is working 100% accuracy for the images with similar size and shape,
-it has very poor result in large images, i still need to explore more to discuss about it, for now no idea yet for discuss further.
+it has very poor result in large images.
+And also there is one issue, even though it is 0.93, it may or may not get proper accuracy, if i run now got 0.93 but the accuracy for the new set will be 0, but i run next time can be 100%.
+
+i run so many times for gettting this result both training and new set accuracy to be good.
+
+i still need to explore more to discuss about it, for now no idea yet for discuss further.
+
+May be I should add more data for training so that it will generalize more for new images.
 
 The top five soft max probabilities:
 
