@@ -1,2 +1,2 @@
-model_checkpoint_path: "lenet-lambda.003-1"
-all_model_checkpoint_paths: "lenet-lambda.003-1"
+model_checkpoint_path: "lenet-lambda.007"
+all_model_checkpoint_paths: "lenet-lambda.007"
