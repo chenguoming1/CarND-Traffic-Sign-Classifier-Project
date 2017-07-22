@@ -158,71 +158,61 @@ it has very poor result in large images, i still need to explore more to discuss
 
 The top five soft max probabilities:
 
+
 ****top five probabilities for image 1  ****
 
-| Image                 |Probabilities                                  |
+| Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-| Priority road        | 99.9948263168 %|
-| Speed limit (50km/h) | 0.00313042182825 %|
-| Roundabout mandatory | 0.000792487026047 %|
-| Speed limit (30km/h) | 0.000609912967775 %|
-| Speed limit (70km/h) | 0.000334634955834 %|
+0 5
+| Priority road | 99.9989748001 %|
+| Speed limit (30km/h) | 0.000584681902183 %|
+| Speed limit (50km/h) | 0.00023453758331 %|
+| Roundabout mandatory | 0.00010265474657 %|
+| Speed limit (70km/h) | 8.04954595424e-05 %|
 
 ****top five probabilities for image 2  ****
 
-| Image                 |Probabilities                                  |
+| Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-| Speed limit (70km/h) | 97.9661941528 %|
-| Speed limit (30km/h) | 1.64432302117 %|
-| Speed limit (120km/h) | 0.231515383348 %|
-| Speed limit (50km/h) | 0.070565653732 %|
-| Speed limit (20km/h) | 0.0263143505435 %|
+1 5
+| Speed limit (70km/h) | 95.9743022919 %|
+| Speed limit (120km/h) | 1.86452642083 %|
+| Speed limit (30km/h) | 1.54375638813 %|
+| Speed limit (100km/h) | 0.534782465547 %|
+| Speed limit (20km/h) | 0.0367628934328 %|
 
 ****top five probabilities for image 3  ****
 
-| Image                 |Probabilities                                  |
+| Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-| Yield | 100.0 %|
-| Turn left ahead | 1.54500284094e-10 %|
-| Priority road | 3.58879267449e-11 %|
-| Keep right | 4.48695171729e-12 %|
-| Children crossing | 8.79885458927e-13 %|
+2 5
+| Yield | 99.9993801117 %|
+| Priority road | 0.000345543253388 %|
+| No passing | 0.000267312702817 %|
+| Ahead only | 1.25945049945e-05 %|
+| Children crossing | 1.4344546384e-08 %|
 
 ****top five probabilities for image 4  ****
 
-| Image                 |Probabilities                                  |
+| Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-| End of speed limit (80km/h) | 99.695122242 %|
-| End of no passing by vehicles over 3.5 metric tons | 0.1607531216 %|
-| End of all speed and passing limits | 0.106064439751 %|
-| Speed limit (30km/h) | 0.0311509356834 %|
-| End of no passing | 0.00392342808482 %|
+3 5
+| End of speed limit (80km/h) | 99.7189939022 %|
+| Speed limit (30km/h) | 0.122778338846 %|
+| End of no passing by vehicles over 3.5 metric tons | 0.10633567581 %|
+| End of all speed and passing limits | 0.0490245060064 %|
+| Speed limit (60km/h) | 0.00168548649526 %|
 
 ****top five probabilities for image 5  ****
 
-| Image                 |Probabilities                                  |
+| Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-| No vehicles | 93.2538807392 %|
-| Speed limit (50km/h) | 2.16651428491 %|
-| Priority road | 2.01165750623 %|
-| Speed limit (120km/h) | 0.80029508099 %|
-| Speed limit (70km/h) | 0.52204108797 %|
-
-[[  9.99948263e-01   3.13042183e-05   7.92487026e-06   6.09912968e-06
-    3.34634956e-06]
- [  9.79661942e-01   1.64432302e-02   2.31515383e-03   7.05656537e-04
-    2.63143505e-04]
- [  1.00000000e+00   1.54500284e-12   3.58879267e-13   4.48695172e-14
-    8.79885459e-15]
- [  9.96951222e-01   1.60753122e-03   1.06064440e-03   3.11509357e-04
-    3.92342808e-05]
- [  9.32538807e-01   2.16651428e-02   2.01165751e-02   8.00295081e-03
-    5.22041088e-03]]
-[[12  2 40  1  4]
- [ 4  1  8  2  0]
- [13 34 12 38 28]
- [ 6 42 32  1 41]
- [15  2 12  8  4]]
+4 5
+| No vehicles | 33.6468070745 %|
+| Speed limit (80km/h) | 19.6046367288 %|
+| Speed limit (120km/h) | 16.5354669094 %|
+| Speed limit (50km/h) | 15.4473975301 %|
+| Priority road | 6.20617754757 %|
 
 
 
