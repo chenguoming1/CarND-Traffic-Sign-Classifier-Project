@@ -163,7 +163,6 @@ The top five soft max probabilities:
 
 | Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-0 5
 | Priority road | 99.9989748001 %|
 | Speed limit (30km/h) | 0.000584681902183 %|
 | Speed limit (50km/h) | 0.00023453758331 %|
@@ -174,7 +173,6 @@ The top five soft max probabilities:
 
 | Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-1 5
 | Speed limit (70km/h) | 95.9743022919 %|
 | Speed limit (120km/h) | 1.86452642083 %|
 | Speed limit (30km/h) | 1.54375638813 %|
@@ -185,7 +183,6 @@ The top five soft max probabilities:
 
 | Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-2 5
 | Yield | 99.9993801117 %|
 | Priority road | 0.000345543253388 %|
 | No passing | 0.000267312702817 %|
@@ -196,7 +193,6 @@ The top five soft max probabilities:
 
 | Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-3 5
 | End of speed limit (80km/h) | 99.7189939022 %|
 | Speed limit (30km/h) | 0.122778338846 %|
 | End of no passing by vehicles over 3.5 metric tons | 0.10633567581 %|
@@ -207,7 +203,6 @@ The top five soft max probabilities:
 
 | Image|Probabilities|
 |:---------------------:|:---------------------------------------------:|
-4 5
 | No vehicles | 33.6468070745 %|
 | Speed limit (80km/h) | 19.6046367288 %|
 | Speed limit (120km/h) | 16.5354669094 %|
