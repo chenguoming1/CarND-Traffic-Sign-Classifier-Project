@@ -76,21 +76,54 @@ Preprocessing Steps:
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-My model is same as CarND-LeNet-Lab except the final output is 43.
- 
+I am using Lenet model, the following is the detailed structure of the network.
+
+Input layer = 32x32x1 
+
+Convolution layer = 5x5 kernel, stride=1, padding=VALID, output=28x28x6, activation=relu
+
+Avg pooling layer = 2x2 kernel, stride=2, padding=VALID, output=14x14x6
+
+Convolution layer = 5x5 kernel, stride=1, padding=VALID, output=10x10x16, activation=relu
+
+Max pooling lyer  = 2x2 kernel, stride=2, padding=VALID, output=5x5x16
+
+Fully connected layer = 120 nodes, activation=relu
+
+Fully connected layer = 84 nodes, activation=relu
+
+Output layer = 43
+
+learning rate = 0.007
+
+classification function = softmax
+
+optimizer = adam
+
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
+optimizer: adam 
 batch size: 128
 number of epoches: 10
-learning rate: 0.005
+learning rate: 0.007
+
+epoch is 10 but I stop the training if i got 0.93 accuracy on validation set.
+
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-model results:
-* validation set accuracy of 0.93
-* test set accuracy of 0.914
+Iterative approach is usually take very long time, for me it is better to use batch approach.
+
+Lenet CNN's convolution layers serve as feature deduction and the fully connected layer serve as the actual training.
+
+and it's easy to train thefore LeNet is suitable for current problem.
+
+I have tried by adding more layers and more hidden units, the validation result seem better but when it come to test set the result is very porr, so it may be overfitting.
  
+I have no idea about choosing parameter, tried adjusting the learning rates and find that learning rate 0.001 to 0.007 seem good and the rest are getting very poor result.
+
+So i just tried to train with these numbers and sometimes it gets to 0.93 in validation set but sometimes doesn't so I tried to run multiple times and when it get to 0.93 i stopped the training and saved the model.
 
 ###Test a Model on New Images
 
@@ -101,6 +134,7 @@ German traffic signs from the web:
 ![alt text][new_img1] ![alt text][new_img2] ![alt text][new_img3] 
 ![alt text][new_img4] ![alt text][new_img5]
 
+Can only choose small and similar sized image since the larger images performance are very poor since the sign is very small and texture is big.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -117,16 +151,75 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 
+The accuracy here is good because i choose the similar sized images, if I choose bigger images the performance worsen, so should try to add gittered images and train it to get better performance
+
+
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 
+Currently the logic is working 100% accuracy for the images with similar size and shape,
+it has very poor result in large images.
+And also there is one issue, even though it is 0.93, it may or may not get proper accuracy, if i run now got 0.93 but the accuracy for the new set will be 0, but i run next time can be 100%.
+
+i run so many times for gettting this result both training and new set accuracy to be good.
+
+i still need to explore more to discuss about it, for now no idea yet for discuss further.
+
+May be I should add more data for training so that it will generalize more for new images.
+
 The top five soft max probabilities:
 
-| Probability			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .43     		| Priority road   									| 
-| .15     			| Speed limit (70km/h) 										|
-| .51					| Yield											|
-| .32		      		| End of speed limit (80km/h)					 				|
-| .21				| No vehicles      							|
+
+****top five probabilities for image 1  ****
+
+| Image|Probabilities|
+|:---------------------:|:---------------------------------------------:|
+| Priority road | 99.9989748001 %|
+| Speed limit (30km/h) | 0.000584681902183 %|
+| Speed limit (50km/h) | 0.00023453758331 %|
+| Roundabout mandatory | 0.00010265474657 %|
+| Speed limit (70km/h) | 8.04954595424e-05 %|
+
+****top five probabilities for image 2  ****
+
+| Image|Probabilities|
+|:---------------------:|:---------------------------------------------:|
+| Speed limit (70km/h) | 95.9743022919 %|
+| Speed limit (120km/h) | 1.86452642083 %|
+| Speed limit (30km/h) | 1.54375638813 %|
+| Speed limit (100km/h) | 0.534782465547 %|
+| Speed limit (20km/h) | 0.0367628934328 %|
+
+****top five probabilities for image 3  ****
+
+| Image|Probabilities|
+|:---------------------:|:---------------------------------------------:|
+| Yield | 99.9993801117 %|
+| Priority road | 0.000345543253388 %|
+| No passing | 0.000267312702817 %|
+| Ahead only | 1.25945049945e-05 %|
+| Children crossing | 1.4344546384e-08 %|
+
+****top five probabilities for image 4  ****
+
+| Image|Probabilities|
+|:---------------------:|:---------------------------------------------:|
+| End of speed limit (80km/h) | 99.7189939022 %|
+| Speed limit (30km/h) | 0.122778338846 %|
+| End of no passing by vehicles over 3.5 metric tons | 0.10633567581 %|
+| End of all speed and passing limits | 0.0490245060064 %|
+| Speed limit (60km/h) | 0.00168548649526 %|
+
+****top five probabilities for image 5  ****
+
+| Image|Probabilities|
+|:---------------------:|:---------------------------------------------:|
+| No vehicles | 33.6468070745 %|
+| Speed limit (80km/h) | 19.6046367288 %|
+| Speed limit (120km/h) | 16.5354669094 %|
+| Speed limit (50km/h) | 15.4473975301 %|
+| Priority road | 6.20617754757 %|
+
+
+
 
